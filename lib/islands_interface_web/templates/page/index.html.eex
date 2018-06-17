@@ -1,14 +1,14 @@
 <div class="jumbotron">
   <h2><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h2>
   <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
-  <p>
-  <%= form_tag("test") do
-    [
-      tag(:input, type: :text, name: "name"),
-      tag(:input, type: :submit, value: "New Game")
-    ]
-  end%>
-</p>
+  <div class="top-row">
+    <div class="island" draggable="true" data-type="square"> Square </div>
+    <div class="island" draggable="true" data-type="atoll"> Atoll </div>
+    <div class="island" draggable="true" data-type="s"> S-shape </div>
+    <div class="island" draggable="true" data-type="dot"> Dot </div>
+    <div class="island" draggable="true" data-type="l"> L-shape </div>
+  </div>
+  <div id="grid-container"></div>
 </div>
 <div class="row marketing">
   <div class="col-lg-6">
